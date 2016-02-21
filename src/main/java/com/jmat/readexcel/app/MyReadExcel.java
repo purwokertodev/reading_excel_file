@@ -34,7 +34,7 @@ import jxl.read.biff.BiffException;
  *
  * @author WURI
  */
-public class MyReadExel {
+public class MyReadExcel {
 
     public List<Mahasiswa> getWorkbookMahasiswa(String path) {
         List<Mahasiswa> list = new ArrayList<>();
@@ -49,7 +49,7 @@ public class MyReadExel {
                 list.add(m);
             }
         } catch (IOException | BiffException ex) {
-            Logger.getLogger(MyReadExel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MyReadExcel.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
     }

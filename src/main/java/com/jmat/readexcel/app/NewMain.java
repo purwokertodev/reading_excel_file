@@ -37,14 +37,13 @@ public class NewMain {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        MyReadExel mr = new MyReadExel();
+        MyReadExcel mr = new MyReadExcel();
         String path = "D:/mycsv/DATA_MAHASISWA_INPUT.xls";
         List<Mahasiswa> list = mr.getWorkbookMahasiswa(path);
         
         MahasiswaDao dao = new MahasiswaDaoImpl();
         
         for(Mahasiswa m:list){
-            //Mahasiswa mahasiswa = new Mahasiswa(m.getNim(), m.getNama(), m.getJurusan());
             dao.save(m);
         }
         
